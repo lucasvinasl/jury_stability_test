@@ -1,3 +1,5 @@
+Considere todas as variáveis e termos traduzidos para nosso bom Português.
+
 função coleta dados:
 recebe o grau do polinomio = 1,2,3, etc.
 a quantidade de termos da função é grau de polinomio + 1
