@@ -1,3 +1,4 @@
+O código foi desenvolvido em Português mas resolvi disponibilizar em inglês para um uso maior de pesoas.
 Considere todas as variáveis e termos traduzidos para nosso bom Português.
 
 função coleta dados:
