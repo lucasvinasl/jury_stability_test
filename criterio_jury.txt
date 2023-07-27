@@ -1,0 +1,66 @@
+função coleta dados:
+recebe o grau do polinomio = 1,2,3, etc.
+a quantidade de termos da função é grau de polinomio + 1
+k = grau do polinomio
+inicia um contador = 0
+criar uma lista vazia polinomio
+enquanto a quantidade de termos > contador o usuário vai inserir o próximo termo e contar +1 no contador.
+assim vai ter que inserir grau do polinomio + 1 termos e encerrar.
+retorna os termos em forma de lista e retorna K que é o grau do polinomio
+
+
+função resultadofinal:
+vai basicamente exibir o resultado final a partir da lista de dicionarios e lista de coeficientes jotas que a função paresValores calculou.
+enumerate transforma cada linha da lista em um índice de iteração: 0,1,2,3, etc.
+zip une os termos de duas listas
+ou seja, tem um índice de iteração para cada par de dicionário unido com um coeficiente jota.
+então para cada iteração nessa juntação de listas, eu pego um dicionário da lista de dicionários e um coeficiente jota da lista de jota
+cada índice de iteração vai representar a posição do meu Kn - par de linhas.
+a primeira linha do par vai ser 2*i + 1: sua respectiva chave do dicionário que é uma lista dos coeficientes
+a primeira linha do par vai ser 2*i + 2: sua respectiva chave do dicionário que é uma lista dos coeficientes
+printa o coeficiente jota pra aquele respectivo dicionário.
+
+implemento a função atribuindo o retorno da função paresValores nas variáveis e pasasndo elas na função que gera a tabela
+
+função principal paresValres recebe as variáveis da função coleta dados
+quantidade de coeficientes = grau do polinomio + 1. esse valor vai ser o número de dicionários que serão criados para armazenar os pares de linhas.
+duas listas pra receber os dicionários e os coeficientes jota
+duas variáveis apenas pra usar como iteradores, uma vai receber a primeira linha do dicionário que será o polinomio repassado pelo usuário e a outra vai inverter a primeira linha.
+
+vai percorrer o for com a quantidade de termos da equação.
+	verifica se é o primeiro iterador, ou seja, 0 pra construir o primeiro dicionário com o IF
+		o dicionário vai ter duas chaves que cada chave vai receber sua linha, onde a linha será a lista com os termos do polinomio.
+		adiciona o dicionário na lista de dicionários criado fora do for.
+		calcula o coeficiente jota pro primeiro dicionário: o primeiro termo da lista2 que é a segunda linha / o primeiro termo da lista1 que é a primeira linha.
+		adiciona o o módulo disso na lista dos coeficientes jota.
+	
+	Else: a partir do segundo dicionário ou do iterador 1 em diante:
+		vai acesasr os valores (lista de valores) da iteração anterior e para a respectiva chave ( que significa a linha).
+		calculamos o coeficiente jota desse novo par de linhas (dicionário) com o primeiro termo da segunda linha anterior / primeiro termo da primeira linha anterior
+		calculamos a próxima primeira linha ou a primeira linha atual(uma nova lista) = é um list comprehension ou seja um FOR abreviado:
+			para cada iterador dentro da lista linha1_anterior, vou pegar esse iterador da linha1_anterior - linha2_anterior com o mesmo iterador * coeficiente jota calculado pra essa nova linha_1.
+		
+		Se (IF) o último elemento da lista 1 for igual a 0, joga fora e a linha_2 recebe a linha_1 invertida.
+
+		Para(FOR) cada valor na linha_1 e linha_2, é arredondado pra 4 casas e adicionado em uma nova lista da linha arredondada.
+
+		calcula o novo coeficiente jota com essa lista arredondada e adiciona na lista dos coef. jota. 
+		cria o dicionário da respectiva iteração e adiciona as duas linhas arredondadas como valores das duas chaves do cionário
+		adiciona o dicionário na lista de dicionários
+
+		Agora faz a verificação dos critérios de parada de Jury:
+		incia um contador
+		para cada valor da linha 1 arredondada que será os valores da linha 1 
+			se aquele valor for sero, soma 1 no contador
+		se ao final do FOR o contador for igual ao comprimento da linha, ou seja, todos os termos da linha forem 0
+			sistema instavel e para a função toda.
+		ou seja, isso é verificado para cada dicionário criado.
+
+		pra cada dicionário verifica se o último valor de jota na lista de coeficiente joga é maior que 1, se for também para a função toda.
+		
+		se nada disso parar no final o sistema é estável
+
+a função retorna a lista de dicionários e a lista de coeficientes jotas pra ser usadas nas outras funções como parÂmetros.
+		
+
+
