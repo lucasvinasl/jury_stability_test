@@ -16,3 +16,5 @@ Creat a dictionaty for each two lines, the first line contain the polynominal co
 Each dictionary is append in dictionary_list.
 For each two lines, calculate a "J coefficient" for stability test and append in a j_coefficient_list.
 If any Stop criterious is true, the code break and show a final table.
+
+![image](https://github.com/lucasvinasl/jury_stability_test/assets/74206824/988514c1-5f4d-4bf9-ad84-8d20ac76e922)
